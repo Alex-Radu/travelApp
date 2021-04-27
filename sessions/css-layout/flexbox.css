@@ -1,0 +1,65 @@
+/* MAKING THINGS LOOK PRETTY */
+
+.toc {
+  position: fixed;
+  left: 15px;
+  top: 15px;
+}
+
+.toc a {
+  display: block;
+}
+
+.container {
+  border: 2px dashed red;
+  box-sizing: border-box;
+  counter-reset: number;
+  height: 50vh;
+  margin: 0 auto 25vh;
+  padding: 20px;
+  position: relative;
+  transform: translateY(50%);
+  width: 80vw;
+}
+
+.container::before {
+  content: 'Flex Container';
+  font-size: 20px;
+  font-weight: bold;
+  left: 0;
+  position: absolute;
+  top: -30px;
+}
+
+.item {
+  border: 1px solid blue;
+  counter-increment: number;
+  padding: 25px;
+  position: relative;
+}
+
+.item::before {
+  content: counter(number)". Flex Item";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+/* THE ESSENTIALS */
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+/* PLAYGROUND */
+#playground {}
